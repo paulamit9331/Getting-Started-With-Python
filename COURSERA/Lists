@@ -1,0 +1,44 @@
+List is a data structure where we can store different types of object seperated by ','
+
+Syntax -> myList = ["amit", 142, 9.2]
+
+we can do similar operation in Lists just as String
+
+1. indexing -> myList[0] = "amit"
+			   myList[1] = 142
+			   myList[2] = 9.2
+
+As string is immutable, we can't change any element using indexing.
+But Lists are mutable, hence we can modify using indexing -> myList[1] = 144;
+
+2. concatenation -> anotherList = ["abc", 134]
+					newList = myList + anotherList		// ["amit", 144, 9.2, "abc", 134]
+
+3. to check th length of a list -> len(newList)			// 5
+
+4. slicing -> newList[1 :]		// [144, 9.2, "abc", 134]
+
+5. in -> 9.2 in newList			// True
+
+
+There are many methods that we can apply on a list ->
+
+1. to add any object at the end of a list -> newList.append("xyz")	// ["amit", 144, 9.2, "abc", 134, "xyz"]
+
+2. to pop out any object from the list -> newList.pop()		// ["amit", 144, 9.2, "abc", 134]
+   if we want to pop any particular index element -> newList.pop(2)		// ["amit", 144, "abc", 134]
+   this pop function returns the popped element
+
+3. to sort any elements in the list -> firstList = [9, 5, 2, 6, 1]
+									   firstList.sort()		// [1, 2, 5, 6, 9]
+									   firstList.reverse()	// [9, 6, 5, 2, 1]
+									   
+									   secondList = ['d', 'a', 'g', 'r', 'c']
+									   secondList.sort()	// ['a', 'c', 'd', 'g', 'r']
+
+4. min(firstList)		// 1
+5. max(firstList)		// 9
+6. sum(firstList)		// 23
+
+7. to split a given string and make a list -> s = "Hello my name is Amit Paul"
+											  newList = s.split()	// it will split the s string by space by default unless ue use any character based on which we want to split the string

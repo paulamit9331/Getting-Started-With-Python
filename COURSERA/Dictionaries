@@ -1,0 +1,50 @@
+dic = {'rice' : 2, 'brush' : 3, 'tisues' : 40}		// don't have any index but key, it's mutable and don't have any order
+		key	  value
+
+print(dic['rice'])		// 2
+
+dic['brush'] = 4
+print(dic)				// {'rice' : 2, 'brush' : 4, 'tisues' : 40}
+
+=> to get list of keys from dictionary:
+
+print(list(dict))		// ['rice', 'brush', 'tisues']
+print(dict.keys())		// ['rice', 'brush', 'tisues']
+
+=> to get key values from dictionary:
+
+print(dict.values())	// [2, 4, 40]
+
+=> to get tuples of keys and values from dictionary:
+
+print(dict.items())		// [('rice', 2), ('brush', 4), ('tisues', 40)]
+
+=> itterating through the dictionary:
+
+for key, value in dict.items():
+	print(key, value)			// [rice] 2
+								// [brush] 4
+								// [tisues] 40
+
+
+sorting dictionary using tuples:
+
+d = {'c' : 5, 'a' : 10, 'b' : 1}
+t = sorted(d.items())		// [('a', 10), ('b', 1), ('c', 5)] => sorted according to key
+
+for key, val in t:
+	print(key, val)
+
+
+
+-> sorting by value
+d = {'c' : 5, 'a' : 10, 'b' : 1}
+l = []
+
+for key, val in d.items():
+	l.append((val, key))
+
+print(l)			// [(10, 'a'), (5, 'c'), (1, 'b')]
+
+l = sorted(l, reverse = True)	// will sort the list of tuples in descending order and 
+print(l)			// [(1, 'b'), (5, 'c'), (10, 'a')]

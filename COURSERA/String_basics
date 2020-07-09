@@ -1,0 +1,101 @@
+Strings:
+
+Strings are nothing but collection of characters which have their own index
+
+Example ->
+
+name = "Amit Paul"	A    m    i    t        P    a    u    l
+		Index->		0	 1	  2	   3		4	 5	  6	   7
+		Index->		0	-7	 -6	  -5	   -4	-3	 -2	  -1
+
+		Example: to access 'a' in the string -> name[5] or name[-3]
+
+when string length is very long and we want to access last element of that string, we can use name[-1]
+to find length of the string we can use -> len("I am") -> 4 (including space)
+
+
+Slicing of any string allows us to grab a sub set of the string or multiple characters
+
+Syntax: [start : stop : step] -> start : starting index of the string
+								 stop : before ending index of the string
+								 step : step size of jumping b/w characters
+
+Example : 
+
+name = "amitpaul"
+name[2 :]	// itpaul
+name[: 4]	// amit
+name[2 : 6]	// itpa
+name[: :]	// amitpaul
+name[: : 2]	// aipu
+name[: : 3]	// atu
+name[1 : 6 : 2]	// mta
+name[: : -1]	// luaptima
+
+-> 'in' operator can be used to give boolean o/p ->
+	fruit = "banana"
+	'a' in fruit		// True
+	'c' in fruit		// False
+	if 'n' in fruit:
+		print("found")	// found
+
+
+String related basic methods :
+
+name = "Amit Paul"
+s = "   abc   ";
+
+1. name.upper()		// AMIT PAUL
+2. name.lower()		// amit paul
+
+3. name.split()		// ["Amit", "Paul"] -> it will create a list of strings based on the blank space
+
+4. s.capitalize()	// Abc
+
+5. name.find("it")	// 2
+   name.find('z')	// -1
+   name.find('a', 3)// 6 -> it will start searching from index 3 to the end
+
+6. name.replace("Amit", "Bikash")	// Bikash Paul
+   name.replace('A', 'o')			// omit Paul
+
+7. s.lstrip()		// 'abc   '
+   s.rstrip()		// '   abc'
+   s.strip()		// 'abc'
+
+8. name.startswith('Amit')			// True
+   name.startswith('a')				// False
+
+9. name = "Hi this is a string"
+   name.split('i')	// ["H ", "th", " s", "s a str", "ng"]	// the string will be splited on the basis of the position of 'i'
+
+
+String is immutable, that means, we can't change a single letter in a given string
+
+Example :
+
+name = "amit"
+//name[0] = 'o'	// error
+to perform the above task, 
+
+my_name = 'o' name[1 :]		// 'o' + 'mit' = "omit"	-> String concatenation
+
+letter = 'a';
+letter = letter * 10		// aaaaaaaaaa
+
+print(letter + " repeated letter")	// aaaaaaaaaa repeated letter
+
+Other process to concate two strings that is known as interpolation: 
+
+1. .format() method -> Syntax -> "String {}".format("inserted")		// String inserted
+								 "A {} {} {}".format("fox", "quick", "brown")	// A fox quick brown
+								 "A {1} {2} {0}".format("fox", "quick", "brown")	// A quick brown fox
+								 						  0       1        2
+								 "A {q} {b} {f}".format(f = "fox", q = "quick", b = "brown")	// A quick brown fox
+
+2. String formatting -> Syntax -> print(f"A {"quick"} {"brown"} {"fox"}")
+
+								  f = "fox"
+								  b = "brown"
+								  q = "quick"
+								  print(f"A {q} {b} {f}")

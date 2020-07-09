@@ -1,0 +1,29 @@
+there are few premetive data types in python
+
+1. Integer -> int (100)
+2. Floating point numbers -> float (23.45)
+3. String -> str ("abc" or 'abc' or "Amit Paul")
+4. Boolean -> bool (True or False)
+
+there are data structures pre defined in python 
+
+1. Lists -> list -> ordered sequence of objects -> [12, "abc", 23.45] -> can be modified
+2. Tuples -> tup -> ordered immutable sequence of objects -> (12, "abc", 23.45) -> can't be modified
+3. Dictionaries -> dict -> unordered keys : valued pairs -> {"name" : "amit", "key" : "values"}
+4. Sets -> set -> unordered collections of unique objects -> ("a", "b")
+
+there's no boundary to declare data types of any variable, python will automatically understand which data type is assigned
+to a variable and accordingly assign that particular data type.
+
+We can also reassign values in the variable with different types of datas
+
+Example ->
+
+my_bag = 2
+my_bag = 3.6
+my_bag = "Big"
+my_bag = ("12", "Big", 3.6)
+
+these above code won't generate any error
+
+to check the type of any variable -> type(variable_name)
